@@ -1,0 +1,97 @@
+.main {
+    z-index: 10;
+    width: 100%;
+    padding: 283px 0;
+    position: relative;
+    @media (max-width:$mobile){
+        padding: 200px 0; 
+    }
+    @media (max-width:$mobileSmall){
+        padding: 140px 0;   
+    }
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        max-width: 850px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__sub-title {
+        font-size: 18px;
+        color: #cdd1c3;
+        padding: 0px 0px 16px 0px;
+        letter-spacing: .2rem;
+        text-wrap: balance;
+        @media (max-width:$mobileSmall){
+            font-size: 14px;
+            text-align: center; 
+       }    
+    }
+
+    &__title {
+        font-size: 56px;
+        line-height: 1.19;
+        color: #ecedc5;
+        font-family: var(--font-accent);
+        padding: 0px 0px 48px 0px;
+        @media (max-width:$mobile){
+             font-size: 46px; 
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 32px;
+             text-align: center; 
+        }
+    }
+
+    &__button {
+       width: 280px;
+       min-height: 64px;
+       background-color: #ECEDC5;
+       transition: all 0.3s ease 0s;
+       svg{
+        margin: 0px 10px 0px 0px;
+        transition: all 0.3s ease 0s;
+        }
+        &:hover{
+            background-color: #EE6531;
+            border-color: #EE6531;
+            color: #fff;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+       @media (max-width:$mobileSmall){
+         width: 100%; 
+       }
+    }
+
+    &__decore {
+        position: absolute;
+        z-index: 1;
+        bottom: 16px;
+        @media (max-width:$mobileSmall){
+             width: 70px; 
+        }
+    }
+}
+.container {
+}
+.main-decore-1 {
+    left: 10%;
+    @media (max-width:$pc){
+        left: 0;
+    }
+}
+.main-decore-2 {
+    right: 10%;
+    transform: scaleX(-1);
+    @media (max-width:$pc){
+        right: 0;
+    }
+}

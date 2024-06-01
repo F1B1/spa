@@ -1,0 +1,127 @@
+.certificate {
+    padding: 130px 0;
+    @media (max-width:$mobile){
+        padding: 100px 0; 
+   }
+   @media (max-width:$mobileSmall){
+        padding: 64px 0; 
+   }
+    &__wrapper {
+        background-color: #E8E8D6;
+        max-width: 1300px;
+        margin: 0px auto;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        @media (max-width:$pc){
+             margin: 0 15px; 
+        }
+    }
+
+    &__container {
+    }
+
+    &__columns {
+        display: flex;
+        padding: 64px 0;
+        @media (max-width:$tablet){
+            flex-direction: column;
+            min-height: 800px;
+        }
+    }
+
+    &__column {
+        flex: 0 1 80%;
+        @media (max-width:$mobileSmall){
+            text-align: center;     
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+             font-size: 30px; 
+             padding: 0px 0px 24px 0px; 
+        } 
+    }
+
+    &__text {
+        font-size: 22px;
+        padding: 0px 0px 24px 0px;
+        @media (max-width:$mobile){
+             font-size: 18px;
+             padding: 0px 0px 16px 0px; 
+        }
+    }
+
+    &__sub-text {
+        font-size: 18px;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+             font-size: 16px; 
+             padding: 0px 0px 24px 0px;
+
+        }
+    }
+
+    &__button {
+        background-color: #1F2B20;
+        color: #fff !important;
+        max-width: 318px;
+        width: 100%;
+        @media (max-width:$mobile){
+             justify-content: center; 
+        }
+        @media (max-width:$mobileSmall){
+             margin: 0px auto;
+             margin-bottom: 40px; 
+        }
+        svg{
+            margin: 0px 16px 0px 0px;
+            path{
+                fill:#ECEDC5 ;
+            }
+        }
+    }
+
+    &__images {
+        position: relative;
+        right: -30px;
+        @media (max-width:$tablet){
+            position: absolute;
+            bottom: -110px;
+            right: -30px;
+        }
+        @media (max-width: em(575.98)){
+              bottom: -55px;
+        }
+    }
+
+    &__image{
+        z-index: 2;
+        position: relative;
+    }
+
+    &__decores{
+        position: absolute;
+        top: -40%;
+        right: -20%;
+        @media (max-width:$tablet){
+            top: -20%;
+            right: -10%;
+        }
+        @media (max-width:em(575.98)){
+            right: 10%; 
+            top: -10%;  
+        }
+    }
+    &__decore{
+        @media (max-width:em(575.98)){
+            max-width: 240px;     
+        }
+    }
+}
