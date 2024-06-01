@@ -109,7 +109,7 @@
     }
 
     &__wrapper {
-        background-image: url('../../img/suitable/01.jpg');
+        background-image: url('../img/suitable/01.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 16px;
@@ -124,17 +124,17 @@
             background-position: center;
         }
         &-2{
-            background-image: url('../../img/suitable/02.jpg');
+            background-image: url('../img/suitable/02.jpg');
         }
         &-4{
             background-image: none;
             background-color: #1F2B20;
         }
         &-5{
-            background-image: url('../../img/suitable/03.jpg');
+            background-image: url('../img/suitable/03.jpg');
         }
         &-6{
-            background-image: url('../../img/suitable/04.jpg');
+            background-image: url('../img/suitable/04.jpg');
         }
     }
 
@@ -196,7 +196,7 @@
                 position: absolute;
                 width: 13px;
                 height: 16px;
-                background-image: url('../../img/icon/figure2-white.svg');
+                background-image: url('../img/icon/figure2-white.svg');
                 background-repeat: no-repeat;
                 top: 50%;
                 transform: translateY(-50%);
@@ -267,7 +267,7 @@
 }
 
 .percent{
-    background-image: url('../../img/suitable/banner.svg');
+    background-image: url('../img/suitable/banner.svg');
     background-repeat: no-repeat;
     background-size: 21px 33px;
     background-position: top right 15px;

@@ -62,13 +62,15 @@
     }
 
     &__image{
-        padding-bottom: 100%;
+        padding-bottom: 110%;
         display: flex;
+        min-height: 620px;
         img{
             border-radius: 0 16px 16px 0;
         }
         @media (max-width:$tablet){
              padding: 0px 0px 60% 0px; 
+             min-height: 100%;
              img{
                 border-radius: 16px 16px 0 0;
             }
@@ -154,7 +156,7 @@
         font-size: 18px;
         padding: 0px 0px 0px 40px;
         margin: 0px 0px 25px 0px;
-        background-image: url('../../img/icon/check.svg');
+        background-image: url('../img/icon/check.svg');
         background-repeat: no-repeat;
         max-width: 70%;
         @media (max-width:$mobile){
