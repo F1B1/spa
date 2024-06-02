@@ -180,6 +180,16 @@
             }
         }
     }
+    &:active{
+        background-color: #ECEDC5;
+        border-color: #ECEDC5;
+        color: #1c2f29;
+        svg{
+            path{
+                fill: #EE6531;
+            }
+        }
+    }
 }
 .showcase{
     position: absolute;

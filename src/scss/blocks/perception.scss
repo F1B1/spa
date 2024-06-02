@@ -1,0 +1,209 @@
+.perception {
+    padding: 130px 0;
+    position: relative;
+    @media (max-width:$mobile){
+         padding: 100px 0; 
+    }
+    @media (max-width:$mobileSmall){
+         padding: 64px 0; 
+    }
+    &__decore{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img{
+            width: 100%;
+            @media (max-width: 767.98px) {
+                height: 38px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        font-family: var(--font-accent);
+        font-size: 50px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-wrap: balance;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+             font-size: 40px; 
+             padding: 0px 0px 24px 0px;
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 28px; 
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        max-width: 65%;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+            padding: 0px 0px 24px 0px;
+            max-width: 100%;
+       }
+       @media (max-width:$mobileSmall){
+         font-size: 16px; 
+       }
+    }
+
+    &__menu {
+        margin: 0px 0px 32px 0px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background-color: #E8E8D6;
+        padding: 0 20px;
+        transition: all 0.3s ease 0s;
+        border-radius: 8px;
+        &:not(:last-child) {margin-right: 8px;};
+        min-height: 50px;
+        cursor: pointer;
+        width: unset;
+        svg{
+            margin: 0px 8px 0px 0px;
+            path{
+                fill: #1F2B20;
+            }
+        }
+        &:hover{
+            background-color: #EE6531;
+            color: #fff;
+            svg{
+                margin: 0px 8px 0px 0px;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__body {
+        padding: 0px 0px 32px 0px;
+        position: static;
+        @media (max-width:$mobileSmall){
+            padding: 0px 0px 24px 0px; 
+       }
+    }
+
+    &__columns {
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 24px 0px; 
+        }
+    }
+
+    &__column {
+        position: relative;
+    }
+
+    &__image {
+        padding: 0px 0px 56% 0px;
+        @media (max-width:$mobile){
+            padding: 0px 0px 74% 0px; 
+        }
+        @media (max-width: em(575.98)){
+            height: 480px;
+        }
+        img{
+            border-radius: 16px;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        @media (max-width:$mobileSmall){
+             bottom: 16px;
+             left: 16px; 
+        }
+    }
+
+    &__sub-title {
+        font-family: var(--font-accent);
+        font-size: 56px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        text-wrap: balance;
+        color: #fff;
+        padding: 0px 0px 8px 0px;
+        max-width: 40%;
+        @media (max-width:$tablet){
+            font-size: 48px;
+        }
+        @media (max-width:$mobile){
+              font-size: 34px;
+              max-width: 100%;
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 26px; 
+        }
+    }
+
+    &__sub-text {
+        color: #fff;
+        font-size: 18px;
+        max-width: 55%;
+        @media (max-width:$mobile){
+             max-width: 75%; 
+             font-size: 16px;
+        }
+        @media (max-width:$mobileSmall){
+             max-width: 100%; 
+        }
+    }
+
+    &__button{
+        max-width: 320px;
+        min-height: 64px;
+        background-color: #1F2B20;
+        margin: 0px auto;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1;
+        svg{
+            margin: 0px 16px 0px 0px;
+            path{
+                fill: #ECEDC5;
+            }
+        }
+    }
+
+    &__controls{
+        .kinds__arrow{
+            top: 55%;
+        }
+    }
+    &__arrow{
+        &-prev{
+            transform: rotate(180deg);
+            left: -20px;
+            @media (max-width:$tablet){
+                left: 0;
+            }
+        }
+        &-next{
+            right: -20px;
+            @media (max-width:$tablet){
+                right: 0;
+            }
+        }
+    }
+
+}

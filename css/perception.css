@@ -1,0 +1,19 @@
+.perception {
+  padding: 130px 0;
+  position: relative;
+}
+.perception__decore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.perception__decore img {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .perception__decore img {
+    height: 38px;
+    object-fit: cover;
+  }
+}

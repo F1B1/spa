@@ -52,19 +52,11 @@
        min-height: 64px;
        background-color: #ECEDC5;
        transition: all 0.3s ease 0s;
+       font-size: 18px;
+       line-height: 1;
        svg{
         margin: 0px 10px 0px 0px;
         transition: all 0.3s ease 0s;
-        }
-        &:hover{
-            background-color: #EE6531;
-            border-color: #EE6531;
-            color: #fff;
-            svg{
-                path{
-                    fill: #fff;
-                }
-            }
         }
        @media (max-width:$mobileSmall){
          width: 100%; 

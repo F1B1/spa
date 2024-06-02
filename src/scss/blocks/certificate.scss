@@ -73,6 +73,11 @@
         color: #fff !important;
         max-width: 318px;
         width: 100%;
+        font-size: 18px;
+        line-height: 1;
+        &:active{
+            color: #1f2b20 !important;
+        }
         @media (max-width:$mobile){
              justify-content: center; 
         }

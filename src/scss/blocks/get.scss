@@ -7,6 +7,21 @@
     @media (max-width:$mobileSmall){
          padding: 60px 0; 
     }
+    &__decore{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        img{
+            width: 100%;
+        }
+        @media (max-width:$mobile){
+            img{
+                height: 38px;
+                object-fit: cover;
+            } 
+        }
+    }
     &__container {
     }
 

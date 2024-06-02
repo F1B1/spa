@@ -52,34 +52,35 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.querySelectorAll('.custom-select').forEach(customSelect => {
         const customSelectTrigger = customSelect.querySelector('.custom-select-trigger');
         const customOptions = customSelect.querySelector('.custom-options');
-        const customArrow = customSelect.querySelector('.select__arrow');
-    
+        const customArrow = customSelect.querySelector('.select__arrow');   
+
         function toggleMenu(e) {
             e.stopPropagation();
             customSelectTrigger.classList.toggle('open');
             customOptions.classList.toggle('open');
             customSelect.classList.toggle('open');
         }
-    
+
         customSelectTrigger.addEventListener('click', toggleMenu);
         customArrow.addEventListener('click', toggleMenu);
-    
+
         customSelect.querySelectorAll('.custom-option').forEach(option => {
             option.addEventListener('click', function () {
                 customSelectTrigger.textContent = this.textContent;
-                cityTown.textContent = this.textContent;
+                const selectedCity = this.dataset.city;
+                updateStreets(selectedCity);
                 customOptions.classList.remove('open');
                 customSelectTrigger.classList.remove('open');
                 customSelect.classList.remove('open');
             });
         });
     });
-    
+
     document.addEventListener('click', function (e) {
         document.querySelectorAll('.custom-select').forEach(customSelect => {
             const customSelectTrigger = customSelect.querySelector('.custom-select-trigger');
             const customOptions = customSelect.querySelector('.custom-options');
-    
+
             if (!customSelect.contains(e.target)) {
                 customOptions.classList.remove('open');
                 customSelectTrigger.classList.remove('open');
@@ -87,6 +88,17 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
         });
     });
+
+    function updateStreets(selectedCity) {
+        document.querySelectorAll('.city__street').forEach(street => {
+            if (street.dataset.city === selectedCity) {
+                street.classList.add('active')
+                document.querySelector('.city__map').style.display ='inline-flex'
+            } else {
+                street.classList.remove('active')
+            }
+        });
+    }
 
 
     function updatePaginationBars(swiper, increaseBar, decreaseBar) {
@@ -145,11 +157,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         slidesPerView: 'auto',
         spaceBetween: 10,
         freeMode: true,
-        breakpoints: {
-            991: {
-                spaceBetween: 0,
-            },
-        },
     });
 
 
@@ -271,4 +278,58 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.querySelector('.pagination-bar-increase-4'),
         document.querySelector('.pagination-bar-decrease-4')
     );
+
+    const stepSwiper = new Swiper('.step__body', {
+        modules:[Navigation, Pagination],
+        slidesPerView: 1,
+        navigation:{
+            nextEl: '.step__arrow-next',
+            prevEl: '.step__arrow-prev',
+        },
+        on: {
+            slideChange: () => {
+                updatePaginationBars(
+                    stepSwiper,
+                    document.querySelector('.pagination-bar-increase-5'),
+                    document.querySelector('.pagination-bar-decrease-5')
+                );
+            },
+        },
+    });
+
+    updatePaginationBars(
+        stepSwiper,
+        document.querySelector('.pagination-bar-increase-5'),
+        document.querySelector('.pagination-bar-decrease-5')
+    );
+
+    const perceptionSwiper = new Swiper('.perception__body', {
+        modules:[Navigation, Pagination],
+        slidesPerView: 1,
+        navigation:{
+            nextEl: '.perception__arrow-next',
+            prevEl: '.perception__arrow-prev',
+        },
+        on: {
+            slideChange: () => {
+                updatePaginationBars(
+                    perceptionSwiper,
+                    document.querySelector('.pagination-bar-increase-6'),
+                    document.querySelector('.pagination-bar-decrease-6')
+                );
+            },
+        },
+    });
+
+    updatePaginationBars(
+        perceptionSwiper,
+        document.querySelector('.pagination-bar-increase-6'),
+        document.querySelector('.pagination-bar-decrease-6')
+    );
+
+    const perceptionTextSwiper = new Swiper('.perception__menu', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        freeMode: true,
+    });
 })
