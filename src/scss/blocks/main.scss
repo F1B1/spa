@@ -3,6 +3,9 @@
     width: 100%;
     padding: 283px 0;
     position: relative;
+    @media (min-width:em(1930)){
+        padding: 380px 0 ;
+    }
     @media (max-width:$mobile){
         padding: 200px 0; 
     }
