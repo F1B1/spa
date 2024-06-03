@@ -1,0 +1,26 @@
+.teams__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.teams__image:nth-child(1) {
+  grid-area: 1/1/3/3;
+}
+.teams__image:nth-child(2) {
+  grid-area: 1/3/2/4;
+}
+.teams__image:nth-child(3) {
+  grid-area: 2/3/5/4;
+}
+.teams__image:nth-child(4) {
+  grid-area: 3/2/5/3;
+}
+.teams__image:nth-child(5) {
+  grid-area: 3/1/5/2;
+}
+.teams__image img {
+  width: 100%;
+  border-radius: 16px;
+}

@@ -11,9 +11,26 @@
     max-height: 725px;
     &.active{
         top: 0;
-        // .menu__decore{
-        //     bottom: 40px;
-        // }
+      
+    }
+
+    &__decore{
+        position: fixed;
+        width: 100%;
+        bottom: 0%;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        display: none;
+        img{
+
+            width: 100%;
+        }
+        @media (max-width:$pc){
+            img{
+                height: 38px;
+                object-fit: cover;
+            } 
+        }
     }
     &__container {
     }
@@ -189,24 +206,6 @@
                 color: #ee6531;
                 border-bottom: 1px solid #ee6531;
             }
-        }
-    }
-       &__decore{
-        position: fixed;
-        width: 100%;
-        bottom: -100%;
-        left: 0;
-        transition: all 0.3s ease 0s;
-        display: none;
-        img{
-            bottom: -30px;
-            width: 100%;
-        }
-        @media (max-width:$pc){
-            img{
-                height: 38px;
-                object-fit: cover;
-            } 
         }
     }
     

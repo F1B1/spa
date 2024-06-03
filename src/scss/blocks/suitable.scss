@@ -82,6 +82,16 @@
                 }
             }
         }
+        &.active{
+            background-color: #EE6531;
+            color: #fff;
+            svg{
+                margin: 0px 8px 0px 0px;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
     }
 
     &__columns {
@@ -163,6 +173,9 @@
     }
 
     &__promotion {
+        @media (max-width:$mobile){
+             position: relative; 
+        }
     }
 
     &__sub-title {

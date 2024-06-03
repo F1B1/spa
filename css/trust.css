@@ -1,0 +1,26 @@
+.trust__wrapper {
+  background-color: #E8E8D6;
+  max-width: 1300px;
+  margin: 0px auto;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.trust__sub-title {
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.trust__body {
+  display: flex;
+}
+.trust__image {
+  padding: 0px 0px 50% 0px;
+}
+.trust__image-decore {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}

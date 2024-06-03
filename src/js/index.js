@@ -3,6 +3,22 @@ import { Navigation, Pagination, Parallax, Autoplay, Controller, FreeMode} from 
 
 document.addEventListener('DOMContentLoaded',()=>{
 
+
+    const headerElement = document.querySelector('.header')
+
+	const callback = function (entries, boserver) {
+		if (entries[0].isIntersecting) {
+			headerElement.classList.remove('scroll')
+		} else {
+			headerElement.classList.add('scroll')
+		}
+	}
+
+	const headerObserver = new IntersectionObserver(callback)
+	headerObserver.observe(headerElement)
+
+
+
     const menuOpen = document.querySelectorAll('.menu-open');
     const menu = document.querySelector('.menu');
     const menuClose = document.querySelector('.menu-close');
@@ -157,6 +173,19 @@ document.addEventListener('DOMContentLoaded',()=>{
         slidesPerView: 'auto',
         spaceBetween: 10,
         freeMode: true,
+    });
+
+    const suitableItems = document.querySelectorAll('.suitable__item');
+
+    function handleItemClick(event) {
+        suitableItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        event.currentTarget.classList.add('active');
+    }
+
+    suitableItems.forEach(item => {
+        item.addEventListener('click', handleItemClick);
     });
 
 
@@ -331,5 +360,18 @@ document.addEventListener('DOMContentLoaded',()=>{
         slidesPerView: 'auto',
         spaceBetween: 10,
         freeMode: true,
+    });
+
+    const perceptionItems = document.querySelectorAll('.perception__item');
+    
+    function handleItemClick(event) {
+        perceptionItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        event.currentTarget.classList.add('active');
+    }
+
+    perceptionItems.forEach(item => {
+        item.addEventListener('click', handleItemClick);
     });
 })

@@ -14,12 +14,14 @@
         left: 0;
         img{
             width: 100%;
-        }
-        @media (max-width:$mobile){
-            img{
-                height: 38px;
+            height: 38px;
+            object-fit: fill;
+            @media (max-width: em(1440)){
                 object-fit: cover;
-            } 
+            }
+            @media (max-width:$mobileSmall){
+                 height: 30px; 
+            }
         }
     }
     &__container {
