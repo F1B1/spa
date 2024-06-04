@@ -28,10 +28,13 @@
             flex-direction: column;
             min-height: 800px;
         }
+        @media (max-width:$mobile){
+             padding: 32px 0; 
+        }
     }
 
     &__column {
-        flex: 0 1 80%;
+        flex: 0 1 70%;
         @media (max-width:$mobileSmall){
             text-align: center;     
         }
@@ -41,12 +44,11 @@
         font-size: 40px;
         font-family: var(--font-accent);
         text-transform: uppercase;
-        line-height: 1.2;
         padding: 0px 0px 32px 0px;
-        @media (max-width:$mobile){
-             font-size: 30px; 
-             padding: 0px 0px 24px 0px; 
-        } 
+        @media (max-width:em(575.98)){
+            padding: 0px 0px 24px 0px; 
+            font-size: 30px; 
+        }
     }
 
     &__text {
@@ -54,7 +56,6 @@
         padding: 0px 0px 24px 0px;
         @media (max-width:$mobile){
              font-size: 18px;
-             padding: 0px 0px 16px 0px; 
         }
     }
 
@@ -75,15 +76,9 @@
         width: 100%;
         font-size: 18px;
         line-height: 1;
+        min-height: 64px !important;
         &:active{
             color: #1f2b20 !important;
-        }
-        @media (max-width:$mobile){
-             justify-content: center; 
-        }
-        @media (max-width:$mobileSmall){
-             margin: 0px auto;
-             margin-bottom: 40px; 
         }
         svg{
             margin: 0px 16px 0px 0px;
@@ -91,11 +86,24 @@
                 fill:#ECEDC5 ;
             }
         }
+        @media (max-width:$mobile){
+             justify-content: center; 
+        }
+        @media (max-width:$mobileSmall){
+             margin: 0px auto;
+             margin-bottom: 40px; 
+             svg{
+                margin: 0px 8px 0px 0px;
+                path{
+                    fill:#ECEDC5 ;
+                }
+            }
+        }
     }
 
     &__images {
         position: relative;
-        right: -30px;
+        right: -80px;
         @media (max-width:$tablet){
             position: absolute;
             bottom: -110px;
@@ -113,10 +121,10 @@
 
     &__decores{
         position: absolute;
-        top: -40%;
+        top: -50%;
         right: -20%;
         @media (max-width:$tablet){
-            top: -20%;
+            top: -15%;
             right: -10%;
         }
         @media (max-width:em(575.98)){

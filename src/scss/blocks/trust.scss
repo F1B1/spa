@@ -19,7 +19,7 @@
         }
         @media (max-width:$mobile){
             margin: 0 15px; 
-            padding: 32px 20px;
+            padding: 32px 16px;
         }
         @media (max-width:em(575.98)){
              padding: 20px 0; 
@@ -32,9 +32,16 @@
     &__sub-title {
         font-size: 18px;
         line-height: 1;
-        letter-spacing: .2rem;
+        letter-spacing: 3.24px;
         text-transform: uppercase;
         padding: 0px 0px 32px 0px;
+        font-weight: 500;
+        color: #646a54;
+        max-width: 90%;
+        @media (max-width:$tablet){
+            line-height: 1.4;
+            max-width: 100%;
+        }
         @media (max-width:$mobileSmall){
              font-size: 14px; 
              padding: 0px 0px 24px 0px;
@@ -47,9 +54,11 @@
         text-transform: uppercase;
         line-height: 1.2;
         padding: 0px 0px 24px 0px;
+        max-width: 80%;
         @media (max-width:$mobile){
              font-size: 40px;
               line-height: 1.2;
+              max-width: 100%;
         }
         @media (max-width:$mobileSmall){
              font-size: 30px; 
@@ -78,6 +87,9 @@
     &__text {
         font-size: 18px;
         &:not(:last-child) {margin-bottom: 24px;};
+        @media (max-width:$mobileSmall){
+             font-weight: 500; 
+        }
     }
 
     &__content {
@@ -103,6 +115,10 @@
         position: absolute;
         bottom: 24px;
         left: 24px;
+        @media (max-width:$mobileSmall){
+             left: 16px;
+             bottom: 16px; 
+        }
     }
 
     &__name {

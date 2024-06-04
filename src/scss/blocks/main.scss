@@ -6,8 +6,9 @@
     padding: 230px 0px 0px 0px;
     position: relative;
     min-height: 800px;
-    @media (min-width:em(1930)){
-        padding: 283px 0 380px 0 ;
+
+    @media (min-width:em(2000)){
+        padding: 383px 0 280px 0 ;
     }
     @media (max-width:$mobile){
         padding: 160px 0; 
@@ -33,19 +34,23 @@
         font-size: 18px;
         color: #cdd1c3;
         padding: 0px 0px 16px 0px;
-        letter-spacing: .2rem;
+        letter-spacing: 3.24px;
         text-wrap: balance;
+        font-weight: 500;
         @media (max-width:$mobileSmall){
             font-size: 14px;
-       }    
+            max-width: 70%;
+            margin: 0px auto;
+       }
     }
 
     &__title {
         font-size: 56px;
-        line-height: 1.19;
+        line-height: 1.2;
         color: #ecedc5;
         font-family: var(--font-accent);
         padding: 0px 0px 48px 0px;
+        font-weight: 500;
         @media (max-width:$mobile){
              font-size: 46px; 
         }
@@ -62,8 +67,8 @@
        font-size: 18px;
        line-height: 1;
        svg{
-        margin: 0px 10px 0px 0px;
-        transition: all 0.3s ease 0s;
+            margin: 0px 16px 0px 0px;
+            transition: all 0.3s ease 0s;
         }
        @media (max-width:em(575.98)){
          width: 100%; 

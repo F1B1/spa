@@ -82,9 +82,14 @@
         border-bottom: 1px solid #1F2B20;
         padding: 0px 0px 4px 0px;
         transition: all 0.3s ease 0s;
-        margin: 16px 0;
         display: none;
-        &:last-child {margin-bottom: 24px;};
+        font-weight: 500;
+        &:nth-child(1n){
+            margin: 8px 0 16px 0;
+        }
+        &:nth-child(2n){
+            margin: 0px 0px 16px 0px;
+        }
         &:hover{
             color: #EE6531;
             border-bottom: 1px solid    #EE6531;
@@ -100,6 +105,7 @@
         transition: all 0.3s ease 0s;
         margin: 24px 0px 0px 0px;
         display:inline-flex;
+        font-weight: 500;
         &:hover{
             color: #EE6531;
             border-bottom: 1px solid    #EE6531;

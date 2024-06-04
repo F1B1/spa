@@ -30,6 +30,7 @@
     &__sub-text {
         font-size: 18px;
         padding: 0px 0px 32px 0px;
+        max-width: 80%;
     }
 
     &__body {
@@ -77,10 +78,10 @@
 
     &__text {
         font-size: 14px;
-        line-height: 1.35;
         padding: 0px 0px 0px 24px;
-        @media (max-width:$mobile){
-             padding: 0px 0px 0px 0px; 
+        font-weight: 500;
+        @media (max-width: em(575.98)){
+            padding: 0px 0px 0px 0px;
         }
     }
 

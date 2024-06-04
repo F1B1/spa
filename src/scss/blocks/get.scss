@@ -5,7 +5,7 @@
         padding: 100px 0; 
     }
     @media (max-width:$mobileSmall){
-         padding: 60px 0; 
+         padding: 64px 0; 
     }
     &__decore{
         position: absolute;
@@ -72,9 +72,11 @@
         @media (max-width:$mobile){
              padding: 0;
              min-width: unset; 
+             align-self: flex-start;
         }
         @media (max-width:$mobileSmall){
-             width: 70%; 
+             width: 70%;
+             align-self: center;
         }
     }
     .line {
@@ -102,9 +104,6 @@
         @media (max-width:$tablet){
             padding: 0px 0px 32px 0px;
        }
-       @media (max-width:$mobileSmall){
-         padding-bottom: 24px; 
-       }
     }
 
     &__text {
@@ -121,6 +120,11 @@
         font-family: var(--font-accent);
         text-transform: uppercase;
         padding: 0px 0px 24px 0px;
+        line-height: 1.15;
+        @media (max-width:$mobileSmall){
+             font-size: 30px; 
+             line-height: 1.2;
+        }
     }
 
     &__swiper {
@@ -142,6 +146,7 @@
         padding: 0 8px;
         .get__text{
             font-size: 16px;
+            font-weight: 500;
         }
         @media (min-width:$tablet){
             flex: 0 1 33.33333%;
@@ -149,6 +154,7 @@
     }
 
     &__image{
+        margin: 0px 0px 16px 0px;
         padding: 0px 0px 95% 0px;
         img{
             border-radius: 16px;
@@ -163,15 +169,6 @@
         @media (min-width:$tablet){
             display: none; 
        }
-    }
-
-    &__pagination {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 10px;
-        position: relative;
     }
 
     &__navigation{
@@ -222,17 +219,16 @@
         }
     }
 }
-.container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
+.swiper-pagination{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    position: relative;
+    .swiper-pagination-bullet{
+        border-radius: 4px;
+    }
 }
 
 .swiper-pagination-bullet {
@@ -246,7 +242,6 @@
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background-color: #1C2F29;
 }
 
 .custom-pagination {

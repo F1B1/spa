@@ -7,4 +7,19 @@ body {
 	color: var(--text-color);
     font-family: var(--font-main);
 	line-height: var(--line-height);
+	
+	&::-webkit-scrollbar {
+		width: 8px; /* Ширина скроллбара */
+    	height: 8px; /* Высота скроллбара для горизонтального */
+	}
+	 
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background-color: grey; /* Серый фон ползунка */
+		border-radius: 10px; /* Закругленные углы */
+	}
+	
 }

@@ -1,0 +1,213 @@
+.review {
+    padding: 0px 0px 130px 0px;
+    @media (max-width:$mobile){
+         padding: 0px 0px 100px 0px; 
+    }
+    @media (max-width:$mobileSmall){
+         padding: 0px 0px 64px 0px; 
+    }
+
+    &__decore{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 38px;
+            object-fit: fill;
+            @media (max-width: em(1440)){
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+
+    &__texts {
+        flex: 0 1 80%;
+        @media (max-width:$mobile){
+             padding: 0px 0px 32px 0px; 
+        }
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 24px 0px; 
+        }
+    }
+
+    &__title {
+        font-size: 50px;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+            font-size: 40px;
+            line-height: 1.2;
+            padding: 0px 0px 24px 0px;
+        }
+        @media (max-width:$mobileSmall){
+            font-size: 30px; 
+        }
+    }
+
+    &__sub-title {
+        font-size: 18px;
+        @media (max-width:$mobileSmall){
+             font-size: 16px; 
+        }
+    }
+
+    &__images {
+        display: flex;
+    }
+
+    &__image {
+        &:not(:last-child) {margin-right: 16px;};
+    }
+
+    &__body {
+        position: static;
+    }
+
+    &__columns {
+        display: flex;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 24px 0px; 
+        }
+    }
+
+    &__column {
+        //flex: 0 1 50%;
+        background-color: #E8E8D6;
+        border-radius: 16px;
+        height: unset   ;
+        &:not(:last-child) {margin-right: 16px;};
+    }
+
+    &__item {
+        padding: 32px 48px;
+        @media (max-width: em(575.98)){
+            padding: 16px; 
+        }
+    }
+
+    &__top {
+        padding: 0px 0px 24px 0px;
+        display: inline-grid;
+        align-items:center;
+        grid-template: auto auto auto / 90px 1fr;
+        column-gap: 24px;
+        @media (max-width:$mobileSmall){
+            grid-template: auto auto auto / 64px 1fr; 
+        }
+    }
+
+    &__avatar {
+        text-align: center;
+        align-self: center;
+        grid-row: span 3;
+    }
+
+    &__stars {
+        padding: 0px 0px 8px 0px;
+    }
+
+    &__name {
+        font-size: 22px;
+        line-height: 1.18;
+        padding: 0px 0px 8px 0px;
+        font-weight: 500;
+        @media (max-width:$mobileSmall){
+             font-size: 16px; 
+        }
+    }
+
+    &__data {
+        font-size: 14px;
+        line-height: 1.36;
+        font-weight: 500;
+    }
+
+    &__general {
+        font-size: 22px;
+        line-height: 1.36;
+        padding: 0px 0px 16px 0px;
+    }
+
+    &__comment {
+        font-size: 18px;
+        margin: 0px 0px 24px 0px;
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 16px 0px; 
+        }
+    }
+
+    &__more {
+
+    }
+
+    &__toggle{
+        display: inline-flex;
+        padding: 0px 0px 4px 0px;
+        border-bottom: 1px solid #1F2B20;
+        cursor: pointer;
+    }
+
+    &__arrow{
+        &-next{
+            right: -20px;
+            top: 60%;
+            @media (max-width:$tablet){
+                right: 0;
+            }
+        }
+        &-prev{
+            transform: rotate(180deg);
+            left: -20px;
+            top:60%;
+            @media (max-width:$tablet){
+                left: 0;
+            }
+        }
+    }
+
+    .custom-pagination{
+        display: flex;
+    }
+}
+
+
+.comment-fade{
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    &::after{
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(to top, #E8E8D6, rgba(255, 255, 255, 0));
+    }
+    &.active{
+        max-height: 100%;
+        &::after{
+            content:'';
+            background: unset;
+        }
+    }
+}

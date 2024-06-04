@@ -11,19 +11,17 @@
         padding: 0px 0px 32px 0px;
         @media (max-width:$mobile){
              font-size: 40px;
-              line-height: 1.2;
-        }
-        @media (max-width:$mobile){
-             padding: 0px 0px 24px 0px; 
-        }
+         }
         @media (max-width:$mobileSmall){
-             font-size: 30px; 
+            padding: 0px 0px 24px 0px;
+             font-size: 28px; 
         }
     }
 
     &__text {
         font-size: 18px;
         padding: 0px 0px 24px 0px;
+        font-weight: 500;
         @media (max-width:$mobile){
              font-size: 16px; 
         }
@@ -64,7 +62,7 @@
         transition: all 0.3s ease 0s;
         cursor: pointer;
         width: unset !important;
-        transition: all 0.3s ease 0s;
+        font-weight: 500;
         svg{
             margin: 0px 8px 0px 0px;
             path{
@@ -163,12 +161,22 @@
                 flex: 1 1 auto;
             }
             &:not(:last-child) {margin-right: 19px;};
+            @media (max-width: em(360)){
+                &:not(:last-child) {margin-right: 16px;};
+            }
+        }
+        @media (max-width: em(360)){
+            margin: 0 -8px;
         }
     }
 
     &__time {
+        font-weight: 500;
         img{
-          padding: 0px 8px 0px 0px;  
+          padding: 0px 8px 0px 0px; 
+          @media (max-width: em(360)){
+              display: none;
+          } 
         }
     }
 
@@ -202,6 +210,7 @@
     &__sub-item{
         font-size: 14px;
         line-height: 1.35em;
+        font-weight: 500;
         &:not(:last-child) {
             margin-right: 30px;
             position: relative;
@@ -225,10 +234,12 @@
     &__sub-text{
         font-size: 16px;
         padding: 0px 0px 16px 0px;
+        line-height: 1.36;
     }
 
     &__prices {
         display: flex;
+        font-weight: 500;
     }
 
     &__new-price {
@@ -271,12 +282,19 @@
         svg{
             margin: 0px 8px 0px 0px;
         }
+        @media (max-width:$mobileSmall){
+             width: 60%; 
+             margin: 0px 8px 0px 0px;
+        }
     }
 
     &__button-2 {
         background-color: #354836;
         border: 1px solid #ECEDC5;
         color: #fff;
+        @media (max-width:$mobileSmall){
+            width: 40%; 
+       }
     }
 }
 

@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         customSelect.querySelectorAll('.custom-option').forEach(option => {
             option.addEventListener('click', function () {
                 customSelectTrigger.textContent = this.textContent;
+                cityTown.textContent = this.textContent
                 const selectedCity = this.dataset.city;
                 updateStreets(selectedCity);
                 customOptions.classList.remove('open');
@@ -138,14 +139,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                 nextEl: '.get__arrow-next',
                 prevEl: '.get__arrow-prev',
             },
-            on: {
-                slideChange: () => {
-                    updatePaginationBars(
-                        getSwiper,
-                        document.querySelector('.pagination-bar-increase-1'),
-                        document.querySelector('.pagination-bar-decrease-1')
-                    );
-                },
+            pagination:{
+                el:'.get__pagination',
             },
             breakpoints:{
                 320:{
@@ -154,26 +149,14 @@ document.addEventListener('DOMContentLoaded',()=>{
                 },
                 479:{
                     slidesPerView: 1.5,
-                    spaceBetween:10,
+                    spaceBetween:20,
                 }
 
             }
         });
 
-        updatePaginationBars(
-            getSwiper,
-            document.querySelector('.pagination-bar-increase-1'),
-            document.querySelector('.pagination-bar-decrease-1')
-        );
     }
 
-    
-
-    const tabsSwiper = new Swiper('.place__list', {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        freeMode: true,
-    });
 
     const suitableItems = document.querySelectorAll('.suitable__item');
 
@@ -189,13 +172,24 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
 
 
+
+    
+    const tabsSwiper = new Swiper('.place__list', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        freeMode: true,
+    });
+
     const contentSwiper = new Swiper('.place__swiper', {
         modules:[Navigation, Pagination],
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
         navigation: {
             nextEl: '.place__arrow-next',
             prevEl: '.place__arrow-prev',
+        },
+        pagination:{
+            el:'.place__pagination',
         },
         on: {
             slideChange: function () {
@@ -208,20 +202,9 @@ document.addEventListener('DOMContentLoaded',()=>{
                     }
                 });
                 tabsSwiper.slideTo(activeIndex);
-                updatePaginationBars(
-                    contentSwiper,
-                    document.querySelector('.pagination-bar-increase-2'),
-                    document.querySelector('.pagination-bar-decrease-2')
-                );
             },
         },
     });
-
-    updatePaginationBars(
-        contentSwiper,
-        document.querySelector('.pagination-bar-increase-2'),
-        document.querySelector('.pagination-bar-decrease-2')
-    );
 
     document.querySelectorAll('.place__item').forEach((item, index) => {
         item.addEventListener('click', function () {
@@ -241,25 +224,16 @@ document.addEventListener('DOMContentLoaded',()=>{
     const kindSwiper = new Swiper('.kinds__body', {
         modules:[Navigation, Pagination],
         slidesPerView: 1,
+        spaceBetween: 20,
         navigation:{
             nextEl: '.kinds__arrow-next',
             prevEl: '.kinds__arrow-prev',
         },
-        on: {
-            slideChange: () => {
-                updatePaginationBars(
-                    kindSwiper,
-                    document.querySelector('.pagination-bar-increase-3'),
-                    document.querySelector('.pagination-bar-decrease-3')
-                );
-            },
+        pagination:{
+            el:'.kinds__pagination',
         },
     });
-    updatePaginationBars(
-        kindSwiper,
-        document.querySelector('.pagination-bar-increase-3'),
-        document.querySelector('.pagination-bar-decrease-3')
-    );
+   
 
     const suitableSwiper = new Swiper('.suitable__menu', {
         slidesPerView: 'auto',
@@ -267,11 +241,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         freeMode: true,
     });
 
-    const suitableActionSwiper = new Swiper('.suitable__menu-action', {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        freeMode: true,
-    });
+    // const suitableActionSwiper = new Swiper('.suitable__menu-action', {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 10,
+    //     freeMode: true,
+    // });
 
     const alsoSwiper = new Swiper('.also__body', {
         modules:[Navigation, Pagination],
@@ -332,15 +306,32 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.querySelector('.pagination-bar-decrease-5')
     );
 
+
+    const perceptionTextSwiper = new Swiper('.perception__menu', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        freeMode: true,
+    });
+
     const perceptionSwiper = new Swiper('.perception__body', {
         modules:[Navigation, Pagination],
         slidesPerView: 1,
+        spaceBetween: 30,
         navigation:{
             nextEl: '.perception__arrow-next',
             prevEl: '.perception__arrow-prev',
         },
         on: {
-            slideChange: () => {
+            slideChange: function () {
+                const activeIndex = this.activeIndex;
+                document.querySelectorAll('.perception__item').forEach((item, index) => {
+                    if (index === activeIndex) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                perceptionTextSwiper.slideTo(activeIndex);
                 updatePaginationBars(
                     perceptionSwiper,
                     document.querySelector('.pagination-bar-increase-6'),
@@ -356,22 +347,80 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.querySelector('.pagination-bar-decrease-6')
     );
 
-    const perceptionTextSwiper = new Swiper('.perception__menu', {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        freeMode: true,
+    document.querySelectorAll('.perception__item').forEach((item, index) => {
+        item.addEventListener('click', function () {
+            perceptionSwiper.slideTo(index);
+        });
     });
 
-    const perceptionItems = document.querySelectorAll('.perception__item');
-    
-    function handleItemClick(event) {
-        perceptionItems.forEach(item => {
-            item.classList.remove('active');
-        });
-        event.currentTarget.classList.add('active');
-    }
+    const activeIndex = contentSwiper.activeIndex;
+    document.querySelectorAll('.perception__item').forEach((item, index) => {
+        if (index === activeIndex) {
+            item.classList.add('active');
+        }
+    });
 
-    perceptionItems.forEach(item => {
-        item.addEventListener('click', handleItemClick);
+    
+    const reviewSwiper = new Swiper('.review__body', {
+        modules:[Navigation, Pagination],
+        slidesPerView: 1,
+        navigation:{
+            nextEl: '.review__arrow-next',
+            prevEl: '.review__arrow-prev',
+        },
+        on: {
+            slideChange: () => {
+                updatePaginationBars(
+                    reviewSwiper,
+                    document.querySelector('.pagination-bar-increase-7'),
+                    document.querySelector('.pagination-bar-decrease-7')
+                );
+            },
+        },
+        breakpoints:{
+            320:{
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+            576:{
+                slidesPerView: 1.2,
+                spaceBetween: 16,
+            },
+            991:{
+                slidesPerView: 2,
+                spaceBetween: 16,
+            }
+        }
+    });
+
+    updatePaginationBars(
+        reviewSwiper,
+        document.querySelector('.pagination-bar-increase-7'),
+        document.querySelector('.pagination-bar-decrease-7')
+    );
+
+    const reviewToggles = document.querySelectorAll('.review__toggle');
+
+    reviewToggles.forEach(toggle => {
+        const reviewTextWrapper = toggle.previousElementSibling;
+
+        if (reviewTextWrapper) {
+            const fade = document.createElement('div');
+            fade.className = 'review__fade';
+            reviewTextWrapper.appendChild(fade);
+
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                reviewTextWrapper.classList.toggle('active');
+
+                if (reviewTextWrapper.classList.contains('active')) {
+                    toggle.textContent = 'Свернуть отзыв';
+                    fade.style.display = 'none';
+                } else {
+                    toggle.textContent = 'Читать отзыв полностью';
+                    fade.style.display = 'block';
+                }
+            });
+        }
     });
 })

@@ -1,12 +1,12 @@
 .also {
 
-    padding: 130px 0;
+    padding-bottom: 130px;
     position: relative;
     @media (max-width:$mobile){
-         padding: 100px 0; 
+        padding-bottom: 100px; 
     }
     @media (max-width:$mobileSmall){
-         padding: 64px 0; 
+        padding-bottom: 64px;
     }
     &__container {
     }
@@ -103,6 +103,7 @@
 
     &__text {
         max-width: 90%;
+        font-weight: 500;
     }
 
     &__button{
@@ -112,6 +113,7 @@
         color: #fff !important;
         font-size: 18px;
         line-height: 1;
+        min-height: 64px !important;
         &:active{
             color: #1f2b20 !important;
         }
