@@ -33,6 +33,12 @@
         }
     }
     &__container {
+        @media (min-width:em(2000)){
+            max-width: 1700px;
+        }
+        @media (min-width:em(2300)){
+            max-width: 1900px;
+        }
     }
 
     &__header {

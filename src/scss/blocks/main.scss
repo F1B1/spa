@@ -6,9 +6,17 @@
     padding: 230px 0px 0px 0px;
     position: relative;
     min-height: 800px;
-
+    @media (min-width:em(2300)){
+        min-height: 900px;
+    }
     @media (min-width:em(2000)){
-        padding: 383px 0 280px 0 ;
+        padding: 243px 0 280px 0 ;
+    }
+    @media (min-width:em(2300)){
+        padding: 383px 0 280px 0 ;  
+    }
+    @media (min-width:em(2300)){
+        padding: 300px 0 280px 0 ;
     }
     @media (max-width:$mobile){
         padding: 160px 0; 
@@ -17,9 +25,21 @@
         padding: 140px 0;   
     }
     &__container {
+        @media (min-width:em(2000)){
+            max-width: 1700px;
+        }
+        @media (min-width:em(2300)){
+            max-width: 1900px;
+        }
     }
 
     &__body {
+        @media (min-width:em(2000)){
+            max-width: 1000px;
+        }
+        @media (min-width:em(2300)){
+            max-width: 1200px
+        }
         display: flex;
         flex-direction: column;
         max-width: 850px;
@@ -31,6 +51,12 @@
     }
 
     &__sub-title {
+        @media (min-width:em(2000)){
+            font-size: 24px;
+        }
+        @media (min-width:em(2300)){
+            font-size: 28px;
+        }
         font-size: 18px;
         color: #cdd1c3;
         padding: 0px 0px 16px 0px;
@@ -45,6 +71,12 @@
     }
 
     &__title {
+        @media (min-width:em(2000)){
+            font-size: 62px;
+        }
+        @media (min-width:em(2300)){
+            font-size: 72px;
+        }
         font-size: 56px;
         line-height: 1.2;
         color: #ecedc5;
@@ -60,6 +92,16 @@
     }
 
     &__button {
+        @media (min-width:em(2000)){
+            width: 320px;
+            min-height: 74px;
+            font-size: 24px;
+        }
+        @media (min-width:em(2300)){
+            width: 380px;
+            min-height: 84px;
+            font-size: 28px;
+        }
        width: 280px;
        min-height: 64px;
        background-color: #ECEDC5;
