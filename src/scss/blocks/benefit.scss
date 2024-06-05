@@ -1,0 +1,110 @@
+.benefit {
+    padding: 80px 0;
+    background-image: url('../img/benefit/bg.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width:$tablet){
+        background-image: url('../img/benefit/bg-mobile.jpg') ;
+        background-position: center;
+    }
+    @media (max-width:$mobileSmall){
+         padding: 64px 0; 
+    }
+
+    &__container {
+    }
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media (max-width:$tablet){
+             padding: 460px 0px 0px 0px; 
+        }
+        @media (max-width:$mobile){
+             padding-top: 380px; 
+        }
+        @media (max-width:$mobileSmall){
+             padding: 240px 0px 0px 0px; 
+        }
+    }
+
+    &__title {
+        color: #ecedc5;
+        font-family: var(--font-accent);
+        font-size: 50px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-wrap: balance;
+        max-width: 60%;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$tablet){
+            max-width: 100%;
+        }
+        @media (max-width:$mobile){
+             font-size: 40px; 
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 28px; 
+             padding: 0px 0px 24px 0px;
+             text-align: center;
+             line-height: 1.15;
+        }
+    }
+
+    &__body {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 50%;
+        @media (max-width:$tablet){
+             max-width: 70%;
+             align-items: flex-start; 
+        }
+        @media (max-width: em(575.98)){
+            max-width: 100%;
+            align-items: center; 
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobileSmall){
+             font-size: 18px; 
+             padding: 0px 0px 24px 0px;
+             text-align: center;
+             max-width: 90%;
+        }
+    }
+
+    &__list {
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 32px 0px; 
+        }
+    }
+
+    &__item {
+        font-weight: 500;
+        &:not(:last-child) {margin-bottom: 24px;};
+        background-image: url('../img/benefit/icon.svg');
+        background-repeat: no-repeat;
+        padding: 0px 0px 0px 42px;
+    }
+
+    &__button {
+        max-width: 280px;
+        width: 100%;
+        background-color: #ECEDC5;
+        min-height: 64px !important;
+        align-self: flex-start;
+        svg{
+            margin: 0px 8px 0px 0px;
+        }
+        @media (max-width:$mobileSmall){
+             max-width: 100%; 
+        }
+    }
+}

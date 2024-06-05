@@ -134,9 +134,11 @@
 .main-decore-1 {
     @media (min-width:em(2000)){
         left: 5%;
+        width: 130px;
     }
     @media (min-width:em(2300)){
         left: 2%;
+        width: 130px;
     }
     left: 10%;
     @media (max-width:$pc){
@@ -146,9 +148,11 @@
 .main-decore-2 {
     @media (min-width:em(2000)){
         right: 5%;
+        width: 130px;
     }
     @media (min-width:em(2300)){
         right: 2%;
+        width: 130px;
     }
     right: 10%;
     transform: scaleX(-1);

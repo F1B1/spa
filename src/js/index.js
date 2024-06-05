@@ -423,4 +423,24 @@ document.addEventListener('DOMContentLoaded',()=>{
             });
         }
     });
+
+    const mapButtons = document.querySelectorAll('.place__map-btn');
+
+    mapButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const placeColumn = button.closest('.place__column');
+
+            if (placeColumn) {
+                placeColumn.classList.toggle('show');
+
+                if (placeColumn.classList.contains('show')) {
+                    button.textContent = 'Свернуть';
+                } else {
+                    button.textContent = 'Развернуть';
+                }
+            }
+        });
+    });
 })

@@ -47,6 +47,12 @@
         justify-content: space-between;
         min-height: 100px;
         transition: all 0.3s ease 0s;
+        @media (min-width:em(2000)){
+            min-height: 110px;
+        }
+        @media (min-width:em(2300)){
+            min-height: 120px;
+        }
     }
 
     &__info{
@@ -77,6 +83,17 @@
     }
 
     &__logo {
+        @media (min-width:em(2000)){
+            max-width: 160px;
+            width: 100%;
+        }
+        @media (min-width:em(2300)){
+            max-width: 180px;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
         padding: 0px 32px 0px 0px;
         @media (max-width:$mobileSmall){
             padding: 0px 24px 0px 0px;
