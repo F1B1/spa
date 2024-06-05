@@ -30,10 +30,13 @@
 
     &__container {
         @media (min-width:em(2000)){
-            max-width: 1700px;
+            max-width: 1760px;
         }
         @media (min-width:em(2300)){
-            max-width: 1900px;
+            max-width: 2000px;
+        }
+        @media (min-width:em(2400)){
+            max-width: 2280px;
         }
     }
     
