@@ -1,0 +1,207 @@
+.own {
+
+    padding: 130px 0;
+    position: relative;
+    @media (max-width:$mobile){
+         padding: 100px 0; 
+    }
+    @media (max-width:$mobileSmall){
+         padding: 64px 0; 
+    }
+    
+    &__decore{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 38px;
+            object-fit: cover;
+            @media (max-width:$mobileSmall){
+                height: 30px; 
+           }
+        }
+    }
+
+    &__container {
+    }
+
+    &__title {
+        font-size: 50px;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 0px 0px 32px 0px;
+        max-width: 80%;
+        @media (max-width:$mobile){
+             font-size: 40px;
+              line-height: 1.2;
+              max-width: 100%;
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 30px; 
+             padding: 0px 0px 24px 0px;
+        }
+    }
+
+    &__sub-title {
+        font-size: 18px;
+        padding: 0px 0px 32px 0px;
+        max-width: 70%;
+        @media (max-width:$mobile){
+             max-width: 100%; 
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 16px;
+        }
+    }
+
+    &__columns {
+        display: flex;
+        border-bottom: 1px solid #CDD1C3;
+        padding: 0px 0px 32px 0px;
+        margin: 0px 0px 32px 0px;
+        @media (max-width:$mobile){
+            flex-direction: column; 
+            padding: 0px 0px 24px 0px;
+            margin: 0px 0px 24px 0px;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 32px 48px 32px;
+        position: relative;
+        min-height: 603px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width:em(575.98)){
+             min-height: 420px; 
+             padding: 16px;
+        }
+    }
+
+    &__column-1 {
+        background-image: url('../../img/own/01.jpg');
+        margin: 0px 16px 0px 0px;
+        @media (max-width:$mobile){
+             margin: 0 0 24px 0; 
+        }
+        @media (max-width:$mobileSmall){
+             margin: 0px 0px 16px 0px; 
+        }
+    }
+
+    &__column-2{
+        background-image: url('../../img/own/02.jpg');
+    }
+
+    &__icon {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        @media (max-width:$mobile){
+            right: 24px;
+            top: 24px;  
+        }
+        @media (max-width:em(575.98)){
+            right: 8px;
+            top: 8px; 
+       }
+    }
+
+    &__text {
+        font-size: 22px;
+        color: #fff;
+        padding: 0px 0px 24px 0px;
+        @media (max-width: em(575.98)){
+            padding: 0px 0px 16px 0px;
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 18px; 
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        padding: 0px 0px 4px 0px;
+        font-size: 18px;
+        align-self: flex-start;
+    }
+    &__sub-text{
+        font-size: 18px;
+        color: #fff;
+        @media (max-width: em(575.98)){
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    &__body {
+        display: flex;
+        background-color: #E8E8D6;
+        border-radius: 16px;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+
+    &__image {
+        flex: 0 1 45%;
+        @media (max-width:$mobile){
+             padding: 0px 0px 69% 0px; 
+        }
+        @media (max-width:$mobileSmall){
+             margin: 16px 16px 0 16px; 
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 16px 0 0 16px;
+            @media (max-width:$mobile){
+                border-radius: 16px 16px 0 0; 
+            }
+            @media (max-width:$mobile){
+                 border-radius: 16px; 
+            }
+        }
+    }
+
+    &__item {
+        flex: 0 1 55%;
+        padding: 32px 42px;
+        @media (max-width:$tablet){
+            padding: 16px 24px;
+        }
+        @media (max-width:$mobile){
+             padding: 32px; 
+        }
+        @media (max-width:$mobileSmall){
+             padding: 24px 16px; 
+        }
+        .own__text{
+            color: #1F2B20;
+            font-size: 18px;
+            @media (max-width:$mobileSmall){
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__name {
+        color: #1c2f29;
+        font-weight: 500;
+        @media (max-width:$mobileSmall){
+            font-size: 14px; 
+        }
+    }
+}
+
+

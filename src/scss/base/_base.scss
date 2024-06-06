@@ -7,10 +7,14 @@ body {
 	color: var(--text-color);
     font-family: var(--font-main);
 	line-height: var(--line-height);
+
+	overflow: visible;
+	transition: all 0.3s ease 0s;
 	
 	&::-webkit-scrollbar {
 		width: 8px; /* Ширина скроллбара */
     	height: 8px; /* Высота скроллбара для горизонтального */
+		transition: all 0.3s ease 0s;
 	}
 	 
 	&::-webkit-scrollbar-track {
