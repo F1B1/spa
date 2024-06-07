@@ -456,4 +456,102 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
         });
     });
+
+
+    const declarationwSwiper = new Swiper('.declaration__body', {
+        modules:[Navigation, Pagination],
+        slidesPerView: 1,
+        navigation:{
+            nextEl: '.declaration__arrow-next',
+            prevEl: '.declaration__arrow-prev',
+        },
+        on: {
+            slideChange: () => {
+                updatePaginationBars(
+                    declarationwSwiper,
+                    document.querySelector('.pagination-bar-increase-8'),
+                    document.querySelector('.pagination-bar-decrease-8')
+                );
+            },
+        },
+        breakpoints:{
+            320:{
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            479:{
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            576:{
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
+            767:{
+                slidesPerView: 6,
+                spaceBetween: 16,
+            }
+        }
+    });
+
+    updatePaginationBars(
+        declarationwSwiper,
+        document.querySelector('.pagination-bar-increase-8'),
+        document.querySelector('.pagination-bar-decrease-8')
+    );
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        on: {
+            createSlide: (fancybox) => {
+                const currentSlide = fancybox.getSlide();
+                declarationwSwiper.slideTo(currentSlide.index, 0, false);
+            },
+            done: (fancybox) => {
+                const currentSlide = fancybox.getSlide();
+                declarationwSwiper.slideTo(currentSlide.index, 0, false);
+            },
+            change: (fancybox, slide) => {
+                declarationwSwiper.slideTo(slide.index, 0, false);
+            }
+        }
+    });
+
+    const newsSwiper = new Swiper('.news__body', {
+        modules:[Navigation, Pagination],
+        slidesPerView: 1,
+        navigation:{
+            nextEl: '.news__arrow-next',
+            prevEl: '.news__arrow-prev',
+        },
+        on: {
+            slideChange: () => {
+                updatePaginationBars(
+                    newsSwiper,
+                    document.querySelector('.pagination-bar-increase-9'),
+                    document.querySelector('.pagination-bar-decrease-9')
+                );
+            },
+        },
+        breakpoints:{
+            320:{
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            },
+            576:{
+                slidesPerView: 1.6,
+                spaceBetween: 16,
+            },
+            991:{
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
+        }
+    });
+
+    updatePaginationBars(
+        newsSwiper,
+        document.querySelector('.pagination-bar-increase-9'),
+        document.querySelector('.pagination-bar-decrease-9')
+    );
+
 })

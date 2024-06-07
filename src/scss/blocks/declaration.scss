@@ -1,0 +1,111 @@
+.declaration {
+    padding: 0px 0px 130px 0px;
+    position: relative;
+    @media (max-width:$mobile){
+         padding: 0px 0px 100px 0px; 
+    }
+    @media (max-width:$mobileSmall){
+         padding: 0px 0px 64px 0px; 
+    }
+
+    &__decore{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 38px;
+            object-fit: cover;
+            @media (max-width:$mobileSmall){
+                height: 30px; 
+           }
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 0px 0px 48px 0px;
+        max-width: 90%;
+        @media (max-width:$mobile){
+             font-size: 40px;
+              max-width: 100%;
+              padding: 0px 0px 34px 0px;
+        }
+        @media (max-width:$mobileSmall){
+             font-size: 30px; 
+             padding: 0px 0px 24px 0px;
+        }
+    }
+
+    &__body {
+        position: static;
+
+    }
+
+    &__columns {
+        display: flex;
+        padding: 0px 0px 32px 0px;
+        @media (max-width:$mobileSmall){
+             padding: 0px 0px 24px 0px; 
+        }
+    }
+
+    &__column {
+        // flex:0 1 16.6666667%;
+        position: relative;
+        border-radius: 8px;
+        transition: all 0.3s ease 0s;
+        border: 1px solid transparent;
+        &:not(:last-child) {margin-right: 16px;};
+        &:hover{
+            border: 1px solid #EE6531;
+            .view-icon{
+                left: 50%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    
+    &__image{
+        img{
+            border-radius: 8px;
+        }
+    }
+
+    &__arrow{
+        &-next{
+            right: -20px;
+            top: 65%;
+            @media (max-width:$tablet){
+                right: 0;
+            }
+        }
+        &-prev{
+            transform: rotate(180deg);
+            left: -20px;
+            top: 65%;
+            @media (max-width:$tablet){
+                left: 0;
+            }
+        }
+    }
+}
+
+.view-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: visible;
+    transition: all 0.3s ease 0s;
+}
