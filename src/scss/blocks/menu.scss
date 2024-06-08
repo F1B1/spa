@@ -78,6 +78,9 @@
     }
 
     &__wave {
+        &:hover{
+            animation: rotate 2s 1;
+        }
     }
 
     &__body {

@@ -87,7 +87,7 @@
     }
 
     &__column-1 {
-        background-image: url('../../img/own/01.jpg');
+        background-image: url('../img/own/01.jpg');
         margin: 0px 16px 0px 0px;
         @media (max-width:$mobile){
              margin: 0 0 24px 0; 
@@ -98,7 +98,7 @@
     }
 
     &__column-2{
-        background-image: url('../../img/own/02.jpg');
+        background-image: url('../img/own/02.jpg');
     }
 
     &__icon {

@@ -66,19 +66,23 @@
         align-items:center;
         justify-content: center;
         padding: 0px 32px 0px 0px;
+        cursor: pointer;
         @media (max-width:$mobile){
                 display: none;  
                 padding: 0px;
         }
         .header__text{
             @media (min-width:em(2000)){
-                font-size: 20px;
+                font-size: 22px;
             }
             @media (min-width:em(2300)){
                 font-size: 24px;
             }
             font-size: 18px;
             font-weight: 500;
+        }
+        &:hover{
+            animation: headerMenu 3s infinite ;
         }
     }
 
@@ -106,7 +110,7 @@
         font-weight: 500;
         span{
             @media (min-width:em(2000)){
-                font-size: 20px;
+                font-size: 22px;
             }
             @media (min-width:em(2300)){
                 font-size: 24px;
@@ -120,6 +124,9 @@
 
     &__wave {
         padding: 0px 0px 0px 10px;
+        &:hover{
+            animation: rotate 2s 1;
+        }
     }
 
     &__city {
@@ -176,7 +183,7 @@
         margin: 0px 32px 0px 0px;
         font-weight: 500;
         @media (min-width:em(2000)){
-            font-size: 20px;
+            font-size: 22px;
         }
         @media (min-width:em(2300)){
             font-size: 24px;
@@ -268,4 +275,19 @@
             }
         }
     }
+}
+
+
+@keyframes headerMenu {
+    0% { transform: rotate(0deg) translate(0px) scale(1); }
+    50% { transform: rotate(5deg) translate(7px) scale(1.1); }
+    100% { transform: rotate(0deg) translate(0px) scale(1); }
+    // 75% { transform: rotate(-5deg) translate(-7px) scale(.9); }
+    // 100% { transform: rotate(5deg) translate(7px) scale(1.1); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg)  }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg)}
 }
