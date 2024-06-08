@@ -4,7 +4,7 @@
 		
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<title>Алтайская здравица</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css" />
@@ -42,13 +42,13 @@
 				</section>
 				<section class="get">
 					<div class="get__decore">
-						<img src="img/decor-top.png" alt="">
+						<img src="img/decor-top.png" alt="decor">
 					</div>
 					<div class="get__container container">
 						<h2 class="get__title">Самый приятный способ перезагрузиться, расслабиться и порадовать себя </h2>
 						<div class="get__info">
 							<div class="get__bird">
-								<img src="img/get/Birds.png" alt="">
+								<img src="img/get/Birds.png" alt="Birds">
 								<div class="line"></div>
 							</div>
 							<div class="get__texts">
@@ -87,12 +87,12 @@
 								</div>
 								<div class="get__pagination swiper-pagination"></div>
 								<div class="get__arrow get__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
 
-						<div class="get__icon"><img src="img/icon/message.svg" alt=""></div>
+						<div class="get__icon"><img src="img/icon/message.svg" alt="message"></div>
 					</div>
 				</section>
 				<section class="place">
@@ -155,14 +155,15 @@
 													<li class="place__sub-item"><a href="#" class="place__sub-link">Схема парковки</a></li>
 												</ul>
 											</div>
-											<div class="place__map">
-												<iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.433826%2C53.720518&mode=search&oid=237087401863&ol=biz&source=mapframe&utm_source=mapframe&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>	
-												<a href="#" class="place__map-btn">Развернуть</a>
+											<div class="map__container">
+												<div class="place__map" data-src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.433826%2C53.720518&mode=search&oid=237087401863&ol=biz&source=mapframe&utm_source=mapframe&z=17">
+													<a href="#" class="place__map-btn">Развернуть</a>
+												</div>
 											</div>
 										</div>
 									</div>
 									<div class="place__column swiper-slide">
-										<h3 class="place__sub-title place__title-mobile">ул. Пушкина, д. 126</h3>
+										<h3 class="place__sub-title place__title-mobile">ул. Пушкина, <br> д. 126</h3>
 										<ul class="place__sub-menu place__sub-menu-mobile">
 											<li class="place__sub-item"><a href="#" class="place__sub-link">Как добраться</a></li>
 											<li class="place__sub-item"><a href="#" class="place__sub-link">Схема парковки</a></li>
@@ -184,10 +185,11 @@
 													<li class="place__sub-item"><a href="#" class="place__sub-link">Схема парковки</a></li>
 												</ul>
 											</div>
-											<div class="place__map">
-												<iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.434198%2C53.718103&mode=poi&poi%5Bpoint%5D=91.427287%2C53.715919&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D114894931069&source=mapframe&utm_source=mapframe&z=16.06" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-												
-												<a href="#" class="place__map-btn">Развернуть</a>
+											<div class="map__container">
+												<div class="place__map" data-src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.434198%2C53.718103&mode=poi&poi%5Bpoint%5D=91.427287%2C53.715919&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D114894931069&source=mapframe&utm_source=mapframe&z=16.06">
+													
+													<a href="#" class="place__map-btn">Развернуть</a>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -214,9 +216,10 @@
 													<li class="place__sub-item"><a href="#" class="place__sub-link">Схема парковки</a></li>
 												</ul>
 											</div>
-											<div class="place__map">
-												<iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.433826%2C53.720518&mode=search&oid=237087401863&ol=biz&source=mapframe&utm_source=mapframe&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-												<a href="#" class="place__map-btn">Развернуть</a>
+											<div class="map__container">
+												<div class="place__map" data-src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=91.433826%2C53.720518&mode=search&oid=237087401863&ol=biz&source=mapframe&utm_source=mapframe&z=17">
+													<a href="#" class="place__map-btn">Развернуть</a>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -302,7 +305,7 @@
 									<div class="kinds__column">
 										<picture class="kinds__image _ibg">
 											<source media="(max-width: 991px)"  srcset="img/kinds/bg-mobile.jpg">
-											<img src="img/kinds/bg.jpg" alt="">
+											<img src="img/kinds/bg.jpg" alt="kinds">
 										</picture>
 									</div>
 								</div>
@@ -355,7 +358,7 @@
 									<div class="kinds__column">
 										<picture class="kinds__image _ibg">
 											<source media="(max-width: 991px)"  srcset="img/kinds/bg-mobile.jpg">
-											<img src="img/kinds/bg.jpg" alt="">
+											<img src="img/kinds/bg.jpg" alt="kinds">
 										</picture>
 									</div>
 								</div>
@@ -408,7 +411,7 @@
 									<div class="kinds__column">
 										<picture class="kinds__image _ibg">
 											<source media="(max-width: 991px)"  srcset="img/kinds/bg-mobile.jpg">
-											<img src="img/kinds/bg.jpg" alt="">
+											<img src="img/kinds/bg.jpg" alt="kinds">
 										</picture>
 									</div>
 								</div>
@@ -416,14 +419,14 @@
 							
 							<div class="kinds__controls">
 								<div class="kinds__arrow kinds__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="swiper-pagination kinds__pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-3"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-3"></span>
 								</div>
 								<div class="kinds__arrow kinds__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
@@ -939,14 +942,14 @@
 							</div>
 							<div class="also__controls">
 								<div class="also__arrow also__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="custom-pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-4"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-4"></span>
 								</div>
 								<div class="also__arrow also__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>	
 						</div>
@@ -961,7 +964,7 @@
 							Подобрать программу</a>
 					</div>
 					<div class="also__decore">
-						<img src="img/decor-top.png" alt="">
+						<img src="img/decor-top.png" alt="decor">
 					</div>
 				</section>
 				<section class="step">
@@ -969,7 +972,7 @@
 						<div class="step__box">
 							<h2 class="step__title">Окружим&nbsp;бережной заботой на каждом этапе</h2>
 							<div class="step__decore">
-								<img src="img/step/decor.png" alt="">
+								<img src="img/step/decor.png" alt="decor">
 							</div>
 							<p class="step__text">Ничего не нужно брать с собой, мы обо всем позаботились —
 								просто&nbsp;приходите, погрузитесь в атмосферу покоя и умиротворения
@@ -1075,7 +1078,7 @@
 					</div>
 				</section>
 				<section class="perception">
-					<div class="perception__decore"><img src="img/decor-bot.png" alt=""></div>
+					<div class="perception__decore"><img src="img/decor-top.png" alt="decor"></div>
 					<div class="perception__container container">
 						<h2 class="perception__title">Ощутите атмосферу сибирского колорита и настоящего релакса</h2>
 						<p class="perception__text">Каждая СПА-программа направлена на все 5 каналов сенсорного восприятия, поэтому опыт посещения впечатляет и дарит яркие эмоции</p>
@@ -1160,14 +1163,14 @@
 							</div>
 							<div class="kinds__controls">
 								<div class="kinds__arrow perception__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="custom-pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-6"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-6"></span>
 								</div>
 								<div class="kinds__arrow perception__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
@@ -1196,7 +1199,7 @@
 									<div class="trust__content">
 										<picture class="trust__image-content _ibg">
 											<source media="(max-width: 479px)"  srcset="img/trust/bg2-mobile.jpg">
-											<img src="img/trust/01.jpg" alt="">
+											<img src="img/trust/01.jpg" alt="trust">
 										</picture>
 										<div class="trust__name-content">
 											<p class="trust__name">Николай и Екатерина Дзязько</p>
@@ -1224,7 +1227,7 @@
 							</div>
 						</div>
 						<div class="trust__decore">
-							<img src="img/trust/decor.png" alt="">
+							<img src="img/trust/decor.png" alt="decor">
 						</div>
 					</div>
 				</section>
@@ -1388,14 +1391,14 @@
 							</div>
 							<div class="kinds__controls">
 								<div class="kinds__arrow review__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="custom-pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-7"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-7"></span>
 								</div>
 								<div class="kinds__arrow review__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
@@ -1426,7 +1429,7 @@
 					</div>
 				</section>
 				<section class="own">
-					<div class="own__decore"><img src="img/decor-bot.png" alt=""></div>
+					<div class="own__decore"><img src="img/decor-top.png" alt="decor"></div>
 					<div class="own__container container">
 						<h2 class="own__title">Косметика собственного производства</h2>
 						<p class="own__sub-title">Сами производим всю линейку косметических продуктов для СПА-программ из натуральных ингредиентов, без искусственных консервантов </p>
@@ -1540,14 +1543,14 @@
 							</div>
 							<div class="kinds__controls">
 								<div class="kinds__arrow declaration__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="custom-pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-8"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-8"></span>
 								</div>
 								<div class="kinds__arrow declaration__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
@@ -1560,7 +1563,7 @@
 							<div class="news__columns swiper-wrapper">
 								<div class="news__column swiper-slide ">
 									<div class="news__image">
-										<img src="img/news/01.jpg" alt="">
+										<img src="img/news/01.jpg" alt="01">
 									</div>
 									<div class="news__content">
 										<p class="news__sub-title">Открытие нового филиала</p>
@@ -1570,7 +1573,7 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image">
-										<img src="img/news/02.jpg" alt="">
+										<img src="img/news/02.jpg" alt="02">
 									</div>
 									<div class="news__content">
 										<p class="news__sub-title">Цветение весны в Алтайской здравнице</p>
@@ -1589,7 +1592,7 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image">
-										<img src="img/news/01.jpg" alt="">
+										<img src="img/news/01.jpg" alt="01">
 									</div>
 									<div class="news__content">
 										<p class="news__sub-title">Открытие нового филиала</p>
@@ -1599,7 +1602,7 @@
 								</div>
 								<div class="news__column swiper-slide">
 									<div class="news__image">
-										<img src="img/news/02.jpg" alt="">
+										<img src="img/news/02.jpg" alt="02">
 									</div>
 									<div class="news__content">
 										<p class="news__sub-title">Цветение весны в Алтайской здравнице</p>
@@ -1619,14 +1622,14 @@
 							</div>
 							<div class="kinds__controls">
 								<div class="kinds__arrow news__arrow-prev swiper-button-prev">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 								<div class="custom-pagination">
 									<span class="pagination-bar pagination-bar-increase pagination-bar-increase-9"></span>
 									<span class="pagination-bar pagination-bar-decrease pagination-bar-decrease-9"></span>
 								</div>
 								<div class="kinds__arrow news__arrow-next swiper-button-next">
-									<img src="img/icon/arrow-slide.svg" alt="">
+									<img src="img/icon/arrow-slide.svg" alt="arrow">
 								</div>
 							</div>
 						</div>
@@ -1638,7 +1641,7 @@
 						<p class="combine__text">Предложим программу с учетом индивидуальных особенностей гостя, предпочтений</p>
 						<div class="combine__body">
 							<div class="combine__image _ibg">
-								<img src="img/combine/01.jpg" alt="">
+								<img src="img/combine/01.jpg" alt="01">
 							</div>
 							<form action="#" class="combine__form" id="contactForm">
 								<p class="combine__sub-title">Оставьте ваши данные и администратор свяжется с вами  по телефону или в мессенджере</p>
@@ -1738,7 +1741,7 @@
 			<div class="popup city__popup">
 				<div class="city__body">
 					<div class="city__wrapper">
-						<div class="city__close"><img data-close src="img/icon/close.svg" alt=""></div>
+						<div class="city__close"><img data-close src="img/icon/close.svg" alt="close"></div>
 						<h4 class="city__title">ВЫБЕРИТЕ ГОРОД</h4>
 						<div class="city__select custom-select">
 							<div class="custom-select-trigger">г. Абакан</div>
@@ -1778,7 +1781,7 @@
 				<div class="custom-thumb"></div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+		<script async src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
 		<script defer src="./js/index.bundle.js"></script>
 	</body>
 </html>

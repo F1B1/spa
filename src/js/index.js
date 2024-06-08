@@ -1,8 +1,40 @@
 import Swiper from "swiper"
-import { Navigation, Pagination, Parallax, Autoplay, Controller, FreeMode} from "swiper/modules";
+import { Navigation, Pagination} from "swiper/modules";
+
+
+function loadMapOnScroll() {
+    var mapContainers = document.querySelectorAll('.map__container');
+
+    function loadMap(mapContainer) {
+        var map = mapContainer.querySelector('.place__map');
+        var iframe = document.createElement('iframe');
+        iframe.src = map.dataset.src;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameborder = '0';
+        iframe.allowfullscreen = '';
+        map.appendChild(iframe);
+    }
+
+    function handleScroll() {
+        mapContainers.forEach(function(mapContainer) {
+            var rect = mapContainer.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top < windowHeight && !mapContainer.dataset.loaded) {
+                loadMap(mapContainer);
+                mapContainer.dataset.loaded = true;
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+}
 
 document.addEventListener('DOMContentLoaded',()=>{
 
+    loadMapOnScroll()
 
     const headerElement = document.querySelector('.header')
 
@@ -254,11 +286,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         freeMode: true,
     });
 
-    // const suitableActionSwiper = new Swiper('.suitable__menu-action', {
-    //     slidesPerView: 'auto',
-    //     spaceBetween: 10,
-    //     freeMode: true,
-    // });
 
     const alsoSwiper = new Swiper('.also__body', {
         modules:[Navigation, Pagination],
@@ -593,6 +620,19 @@ document.addEventListener('DOMContentLoaded',()=>{
                 const label = input.nextElementSibling;
                 label.classList.remove('focused');
             }
+        });
+    });
+
+
+    const toggleButtons = document.querySelectorAll('.footer__text');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const menu = button.nextElementSibling;
+        if (menu) {
+            menu.classList.toggle('active');
+        }
         });
     });
 
