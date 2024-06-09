@@ -10,11 +10,17 @@ body {
 
 	overflow: visible;
 	transition: all 0.3s ease 0s;
+
+	&.block-scroll{
+		&::-webkit-scrollbar{
+			width: 0;
+		}
+	}
 	
 	&::-webkit-scrollbar {
-		width: 8px; /* Ширина скроллбара */
-    	height: 8px; /* Высота скроллбара для горизонтального */
-		transition: all 0.3s ease 0s;
+		width: 8px; 
+    	height: 8px; 
+		transition: all 1.3s ease 0s;
 	}
 	 
 	&::-webkit-scrollbar-track {
@@ -22,8 +28,8 @@ body {
 	}
 	
 	&::-webkit-scrollbar-thumb {
-		background-color: grey; /* Серый фон ползунка */
-		border-radius: 10px; /* Закругленные углы */
+		background-color: grey; 
+		border-radius: 10px; 
 	}
 	
 }
