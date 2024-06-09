@@ -6,6 +6,17 @@ import loadMapOnScroll from "./libs/map";
 
 document.addEventListener('DOMContentLoaded',()=>{
 
+    var video = document.getElementById('video');
+    var placeholder = document.getElementById('placeholder');
+
+    video.addEventListener('canplaythrough', function() {
+        placeholder.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    }, false);
+
+    video.load();
+
     loadMapOnScroll()
     headerScroll()
     selectCustom()

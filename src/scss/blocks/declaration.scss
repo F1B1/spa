@@ -84,7 +84,7 @@
     &__arrow{
         &-next{
             right: -20px;
-            top: 65%;
+            top: 65% !important;
             @media (max-width:$tablet){
                 right: 0;
             }
@@ -92,7 +92,7 @@
         &-prev{
             transform: rotate(180deg);
             left: -20px;
-            top: 65%;
+            top: 65% !important;
             @media (max-width:$tablet){
                 left: 0;
             }
